@@ -1,4 +1,4 @@
-@import url("//fonts.googleapis.com/css?family=Roboto:300,400,500");
+@import url("//fonts.googleapis.com/css?family=Roboto:300,400,500,700");
 /*!
  * bootswatch v3.3.2
  * Homepage: http://bootswatch.com
@@ -6781,6 +6781,18 @@ button.close {
 .btn-default.disabled {
   border: 1px solid #eeeeee;
 }
+.btn-group .btn + .btn,
+.btn-group .btn + .btn-group,
+.btn-group .btn-group + .btn,
+.btn-group .btn-group + .btn-group {
+  margin-left: 0;
+}
+.btn-group-vertical > .btn + .btn,
+.btn-group-vertical > .btn + .btn-group,
+.btn-group-vertical > .btn-group + .btn,
+.btn-group-vertical > .btn-group + .btn-group {
+  margin-top: 0;
+}
 body {
   -webkit-font-smoothing: antialiased;
   letter-spacing: .1px;
@@ -6799,6 +6811,9 @@ a {
   -webkit-transition: all 0.2s;
   -o-transition: all 0.2s;
   transition: all 0.2s;
+}
+label {
+  font-weight: normal;
 }
 textarea,
 textarea.form-control,
@@ -7077,23 +7092,23 @@ input[type="checkbox"]:disabled:checked:after,
   background-color: #bbbbbb;
   border-color: transparent;
 }
-.has-warning input,
+.has-warning input:not([type=checkbox]),
 .has-warning .form-control,
-.has-warning input:focus,
+.has-warning input:not([type=checkbox]):focus,
 .has-warning .form-control:focus {
   -webkit-box-shadow: inset 0 -2px 0 #ff9800;
   box-shadow: inset 0 -2px 0 #ff9800;
 }
-.has-error input,
+.has-error input:not([type=checkbox]),
 .has-error .form-control,
-.has-error input:focus,
+.has-error input:not([type=checkbox]):focus,
 .has-error .form-control:focus {
   -webkit-box-shadow: inset 0 -2px 0 #e51c23;
   box-shadow: inset 0 -2px 0 #e51c23;
 }
-.has-success input,
+.has-success input:not([type=checkbox]),
 .has-success .form-control,
-.has-success input:focus,
+.has-success input:not([type=checkbox]):focus,
 .has-success .form-control:focus {
   -webkit-box-shadow: inset 0 -2px 0 #4caf50;
   box-shadow: inset 0 -2px 0 #4caf50;
