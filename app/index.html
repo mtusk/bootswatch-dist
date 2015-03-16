@@ -1,0 +1,91 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>bootswatch-dist</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" />
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+  </head>
+  <body ng-app="bootswatchDistApp" layout="column">
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+
+    <section layout="row" flex>
+      <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="true">
+        <md-toolbar class="md-theme-indigo">
+          <h1 class="md-toolbar-tools"><img src="images/bootswatch-dist.png" style="max-height: 25px; margin-right: 8px"> bootswatch-dist</h1>
+        </md-toolbar>
+        <md-content class="nav-menu" layout="column">
+          <md-button class="md-block" href="#/" flex>
+            Getting Started
+          </md-button>
+          <md-button class="md-block" href="#/about" flex>
+            How?
+          </md-button>
+          <md-button class="md-block" href="#/credits" flex>
+            Credits
+          </md-button>
+        </md-content>
+        <md-content class="author-info">
+          Author: <md-button class="md-primary" href="https://twitter.com/dbtek">@dbtek</md-button>
+        </md-content>
+      </md-sidenav>
+      <md-content flex>
+        <div ng-view></div>
+        <md-button class="md-fab md-fab-bottom-right md-accent md-hue-2" aria-label="Github repo"
+          href="https://github.com/dbtek/bootswatch-dist" target="_blank">
+          <md-tooltip>
+            Github repo
+          </md-tooltip>
+          <md-icon class="fa fa-github fa-2x"></md-icon>
+        </md-button>
+        <div flex></div>
+      </md-content>
+    </section>
+
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+     <script>
+       !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
+       (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
+       r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
+       }(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+       ga('create', 'UA-XXXXX-X');
+       ga('send', 'pageview');
+    </script>
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.js"></script>
+    <script src="bower_components/angular-material/angular-material.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/controllers/about.js"></script>
+    <script src="scripts/services/ghapi.js"></script>
+    <script src="scripts/controllers/credits.js"></script>
+    <script src="scripts/controllers/themes.js"></script>
+    <!-- endbuild -->
+</body>
+</html>
